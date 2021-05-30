@@ -1,34 +1,30 @@
 package dev.kartikbhalla;
 
-import java.util.ArrayList;
+import java.util.Arrays;
 
 public class Main {
 
     public static void main(String[] args) {
 
-//        var array = new DynamicArray(5);
-//        array.insert(2);
-//        array.insert(4);
-//        array.insert(6);
-//        array.insert(8);
-//        array.insert(10);
-//        System.out.println(array);
+        var list = new LinkedList();
+
+        list.addLast(5);
+        list.addLast(6);
+        list.addLast(7);
+//        list.addLast(8);
+
+
+
+//        System.out.println(list.contains(18));
+
+//        list.removeFirst();
+        System.out.println(Arrays.toString(list.toArray()));
+
+//        list.reverse();
 //
-//        array.removeAt(2);
-//        System.out.println(array);
-//
-//        System.out.println(array.indexOf(4));
+//        System.out.println(Arrays.toString(list.toArray()));
 
-        var array  = new ArrayList<Integer>();
-        array.add(2);
-        array.add(4);
-        array.add(6);
-        array.add(8);
-        array.add(10);
-        array.remove(2);
-        System.out.println(array);
-
-
+        System.out.println(list.getKthElementFromEnd(3));
 
     }
 }
