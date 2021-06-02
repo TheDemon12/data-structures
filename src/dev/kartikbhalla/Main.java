@@ -1,19 +1,37 @@
 package dev.kartikbhalla;
 
 import java.util.ArrayDeque;
-import java.util.Queue;
 
 public class Main {
 
     public static void main(String[] args) {
 
-        Queue<Integer> queue = new ArrayDeque<>();
-        queue.add(2);
-        queue.add(3);
-        queue.add(4);
+//        Queue<Integer> queue = new ArrayDeque<>();
+//        queue.add(2);
+//        queue.add(3);
+//        queue.add(4);
+//        System.out.println(queue);
+//        Utils.reverseQueue(queue);
+//        System.out.println(queue);
+
+        Queue queue = new Queue(5);
+        queue.enqueue(1);
+        queue.enqueue(2);
+        queue.enqueue(3);
+        queue.enqueue(4);
+        queue.enqueue(5);
+
+        queue.dequeue();
+        queue.dequeue();
+        queue.dequeue();
+        queue.dequeue();
         System.out.println(queue);
-        Utils.reverseQueue(queue);
+
+        queue.enqueue(6);
         System.out.println(queue);
+
+
+
 
     }
 }
