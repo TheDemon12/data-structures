@@ -30,16 +30,27 @@ public class Main {
 //        queue.enqueue(6);
 //        System.out.println(queue);
 
-        CircularQueue queue = new CircularQueue(5);
+//        CircularQueue queue = new CircularQueue(5);
+//        queue.enqueue(1);
+//        queue.enqueue(2);
+//        queue.enqueue(3);
+//        queue.enqueue(4);
+//        queue.enqueue(5);
+//        queue.dequeue();
+//        queue.enqueue(6);
+////        queue.enqueue(7);
+//        System.out.println(queue);
+
+        QueueWithStacks queue = new QueueWithStacks();
         queue.enqueue(1);
         queue.enqueue(2);
         queue.enqueue(3);
         queue.enqueue(4);
         queue.enqueue(5);
-        queue.dequeue();
-        queue.enqueue(6);
-//        queue.enqueue(7);
-        System.out.println(queue);
+
+        System.out.println(queue.dequeue());
+        System.out.println(queue.dequeue());
+        System.out.println(queue.dequeue());
 
 
 
