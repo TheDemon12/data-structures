@@ -1,19 +1,19 @@
 package dev.kartikbhalla;
 
+import java.util.ArrayDeque;
+import java.util.Queue;
+
 public class Main {
 
     public static void main(String[] args) {
 
-        var stack = new StackList();
-        stack.push(4);
-        stack.push(5);
-        stack.push(6);
-        stack.push(7);
-        stack.push(8);
-        stack.push(9);
-        stack.pop();
+        Queue<Integer> queue = new ArrayDeque<>();
+        queue.add(2);
+        queue.add(3);
+        queue.add(4);
+        System.out.println(queue);
+        Utils.reverseQueue(queue);
+        System.out.println(queue);
 
-        System.out.println(stack.peek());
-        System.out.println(stack);
     }
 }
