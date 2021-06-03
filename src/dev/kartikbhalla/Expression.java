@@ -11,7 +11,7 @@ public class Expression {
         System.out.println(expression.isExpressionBalanced());
      */
 
-    private final List leftBrackets =  Arrays.asList('(', '[', '{', '<');
+    private final List leftBrackets = Arrays.asList('(', '[', '{', '<');
     private final List rightBrackets = Arrays.asList(')', ']', '}', '>');
     private String expression;
 
@@ -21,16 +21,16 @@ public class Expression {
 
     public boolean isExpressionBalanced() {
 
-        Stack<Character> stack  = new Stack<>();
-        for(char ch: this.expression.toCharArray()) {
-            if(isLeftBracket(ch))
+        Stack<Character> stack = new Stack<>();
+        for (char ch : this.expression.toCharArray()) {
+            if (isLeftBracket(ch))
                 stack.push(ch);
 
-            else if(isRightBracket(ch)) {
-                if(stack.isEmpty()) return false;
+            else if (isRightBracket(ch)) {
+                if (stack.isEmpty()) return false;
 
                 char top = stack.pop();
-                if(!doBracketsMatch(ch, top)) return false;
+                if (!doBracketsMatch(ch, top)) return false;
             }
         }
         return stack.isEmpty();

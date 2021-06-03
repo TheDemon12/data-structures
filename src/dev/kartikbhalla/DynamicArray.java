@@ -22,16 +22,17 @@ public class DynamicArray {
     public DynamicArray(int length) {
         array = new int[length];
     }
+
     public DynamicArray() {
         this(5);
     }
 
     public void insert(int item) {
 
-        if(this.index == this.array.length) {
-            int[] newArray = new int[this.index*2];
+        if (this.index == this.array.length) {
+            int[] newArray = new int[this.index * 2];
 
-            for(int i = 0; i < this.index; i++) {
+            for (int i = 0; i < this.index; i++) {
                 newArray[i] = this.array[i];
             }
             this.array = newArray;
@@ -42,20 +43,20 @@ public class DynamicArray {
     }
 
     public int indexOf(int item) {
-        for(int i = 0; i < this.index; i++)
-            if(this.array[i] == item) return i;
+        for (int i = 0; i < this.index; i++)
+            if (this.array[i] == item) return i;
 
         return -1;
     }
 
     public int removeAt(int index) {
-        if(index < 0 || index >= this.index) throw new IndexOutOfBoundsException();
+        if (index < 0 || index >= this.index) throw new IndexOutOfBoundsException();
 
         int elementDeleted = this.array[index];
 
-        for(int i = index; i < this.index; i++) {
-            if(i == this.index - 1) this.array[i] = 0;
-            else this.array[i] = this.array[i+1];
+        for (int i = index; i < this.index; i++) {
+            if (i == this.index - 1) this.array[i] = 0;
+            else this.array[i] = this.array[i + 1];
         }
 
         this.index--;
@@ -66,12 +67,12 @@ public class DynamicArray {
     public String toString() {
         String arrayToString = "[";
 
-        for(int i = 0; i < this.index; i++){
+        for (int i = 0; i < this.index; i++) {
             arrayToString += this.array[i];
-            if(i != this.index -1) arrayToString += ", ";
+            if (i != this.index - 1) arrayToString += ", ";
         }
 
-        return  arrayToString + "]";
+        return arrayToString + "]";
     }
 
 }

@@ -30,13 +30,13 @@ public class StackList {
     }
 
     public int pop() {
-        if(this.isEmpty()) throw new EmptyStackException();
+        if (this.isEmpty()) throw new EmptyStackException();
 
         return this.list.removeLast();
     }
 
     public int peek() {
-        if(this.isEmpty()) throw new EmptyStackException();
+        if (this.isEmpty()) throw new EmptyStackException();
 
         return this.list.getLast();
     }

@@ -43,11 +43,12 @@ public class LinkedList {
     public void addLast(int value) {
         var node = new Node(value);
 
-        if(isEmpty()) first = last = node;
+        if (isEmpty()) first = last = node;
         else {
             last.next = node;
             this.last = node;
-        };
+        }
+        ;
 
         this.size++;
     }
@@ -55,7 +56,7 @@ public class LinkedList {
     public void addFirst(int value) {
         var node = new Node(value);
 
-        if(isEmpty()) first = last = node;
+        if (isEmpty()) first = last = node;
         else {
             node.next = this.first;
             this.first = node;
@@ -69,7 +70,7 @@ public class LinkedList {
         int index = 0;
 
         while (node != null) {
-            if(node.value == value) return index;
+            if (node.value == value) return index;
 
             index++;
             node = node.next;
@@ -78,16 +79,16 @@ public class LinkedList {
     }
 
     public boolean contains(int value) {
-       return indexOf(value) != -1;
+        return indexOf(value) != -1;
     }
 
     public int removeFirst() {
 
-        if(first == null) throw new IllegalStateException();
+        if (first == null) throw new IllegalStateException();
         else {
             int value = this.first.value;
 
-            if(first == last)  first = last = null;
+            if (first == last) first = last = null;
             else
                 this.first = this.first.next;
 
@@ -98,11 +99,11 @@ public class LinkedList {
 
     public int removeLast() {
 
-        if(first == null) throw new IllegalStateException();
+        if (first == null) throw new IllegalStateException();
         else {
             int value = this.first.value;
 
-            if(first == last) first = last = null;
+            if (first == last) first = last = null;
             else {
                 var previousNode = getPreviousNode(this.last);
 
@@ -118,8 +119,8 @@ public class LinkedList {
     private Node getPreviousNode(Node node) {
         var currentNode = this.first;
 
-        while(currentNode.next != null) {
-            if(currentNode.next == node) return currentNode;
+        while (currentNode.next != null) {
+            if (currentNode.next == node) return currentNode;
             currentNode = currentNode.next;
         }
 
@@ -136,14 +137,13 @@ public class LinkedList {
         var currentNode = this.first;
         Node previousNode = null;
 
-        while(currentNode != null) {
+        while (currentNode != null) {
             Node nextNode = currentNode.next;
 
-            if(previousNode == null) {
+            if (previousNode == null) {
                 this.last = currentNode;
                 this.last.next = null;
-            }
-            else currentNode.next = previousNode;
+            } else currentNode.next = previousNode;
 
             previousNode = currentNode;
             currentNode = nextNode;
@@ -154,16 +154,16 @@ public class LinkedList {
 
     public int getKthElementFromEnd(int k) {
 
-        if(k < 1 || k > this.size) throw new IllegalArgumentException();
+        if (k < 1 || k > this.size) throw new IllegalArgumentException();
 
         var firstPointer = this.first;
         var secondPointer = firstPointer;
 
-        for(int i = 0; i < k-1; i++) {
+        for (int i = 0; i < k - 1; i++) {
             secondPointer = secondPointer.next;
         }
 
-        while(secondPointer.next != null) {
+        while (secondPointer.next != null) {
             firstPointer = firstPointer.next;
             secondPointer = secondPointer.next;
         }

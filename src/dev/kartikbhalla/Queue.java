@@ -4,6 +4,22 @@ import java.util.Arrays;
 
 public class Queue {
 
+    /* Usage Example
+
+        Queue queue = new Queue(5);
+        queue.enqueue(1);
+        queue.enqueue(2);
+        queue.enqueue(3);
+        queue.enqueue(4);
+        queue.enqueue(5);
+
+        queue.dequeue();
+        queue.dequeue();
+        queue.dequeue();
+        queue.dequeue();
+        System.out.println(queue);
+     */
+
     protected int[] array;
     protected int front, rear;
 
@@ -14,7 +30,7 @@ public class Queue {
     }
 
     public void enqueue(int element) {
-        if(isEmpty())
+        if (isEmpty())
             front = rear = 0;
         else if (isFull()) throw new IllegalStateException();
         else rear++;
@@ -23,7 +39,7 @@ public class Queue {
     }
 
     public int dequeue() {
-        if(isEmpty()) throw new IllegalStateException();
+        if (isEmpty()) throw new IllegalStateException();
 
         else if (front == rear) {
             int element = array[front];
@@ -35,7 +51,7 @@ public class Queue {
     }
 
     public int peek() {
-        if(isEmpty()) throw new IllegalStateException();
+        if (isEmpty()) throw new IllegalStateException();
 
         return array[front];
     }
@@ -52,7 +68,7 @@ public class Queue {
     public String toString() {
         int[] array;
 
-        if(isEmpty()) array = new int[0];
+        if (isEmpty()) array = new int[0];
         else array = Arrays.copyOfRange(this.array, front, rear + 1);
 
         return Arrays.toString(array);

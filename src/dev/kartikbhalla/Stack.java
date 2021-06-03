@@ -26,19 +26,20 @@ public class Stack {
         this.array = new int[initialSize];
         this.top = -1;
     }
+
     Stack() {
         this(5);
     }
 
     public void push(int element) {
         this.top++;
-        if(this.top == this.array.length) throw new StackOverflowError();
+        if (this.top == this.array.length) throw new StackOverflowError();
 
         this.array[this.top] = element;
     }
 
     public int pop() {
-        if(this.isEmpty()) throw new EmptyStackException();
+        if (this.isEmpty()) throw new EmptyStackException();
 
         var element = this.array[this.top];
         this.array[this.top--] = 0;
@@ -47,7 +48,7 @@ public class Stack {
     }
 
     public int peek() {
-        if(this.isEmpty()) throw new EmptyStackException();
+        if (this.isEmpty()) throw new EmptyStackException();
 
         return this.array[this.top];
     }
