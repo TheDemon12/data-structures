@@ -9,7 +9,6 @@ public class Utils {
     public static String reverseString(String input) {
 
         /* Usage Example
-
             String string = "kartik";
             var reversed = Utils.reverseString(string);
          */
@@ -32,7 +31,6 @@ public class Utils {
     public static void reverseQueue(Queue<Integer> queue) {
 
         /* Usage Example
-
             Queue<Integer> queue = new ArrayDeque<>();
             queue.add(2);
             queue.add(3);
@@ -53,6 +51,11 @@ public class Utils {
 
     public static Character firstNonRepeatedCharacter(String input) {
 
+        /* Usage Example
+            var ch = firstNonRepeatedCharacter("hello world ");
+            System.out.println(ch);
+         */
+
         Map<Character, Integer> map = new HashMap<>();
         var charArray = input.toCharArray();
 
@@ -67,6 +70,11 @@ public class Utils {
     }
 
     public static Character firstRepeatedCharacter(String input) {
+
+        /* Usage Example
+            var ch = firstRepeatedCharacter("hello world ");
+            System.out.println(ch);
+         */
 
         Set<Character> set = new HashSet<>();
         var charArray = input.toCharArray();

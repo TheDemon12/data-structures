@@ -3,10 +3,9 @@ package dev.kartikbhalla;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class CircularQueue extends Queue {
+public class  CircularQueue extends Queue {
 
     /* Usage Example
-
         CircularQueue queue = new CircularQueue(5);
         queue.enqueue(1);
         queue.enqueue(2);

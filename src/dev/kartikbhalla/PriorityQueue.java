@@ -3,7 +3,6 @@ package dev.kartikbhalla;
 public class PriorityQueue extends Queue {
 
     /* Usage Example
-
         PriorityQueue queue = new PriorityQueue(5);
         queue.enqueue(3);
         queue.enqueue(2);
@@ -14,7 +13,7 @@ public class PriorityQueue extends Queue {
         System.out.println(queue);
 
         while(!queue.isEmpty())
-                System.out.println(queue.dequeue());
+            System.out.println(queue.dequeue());
      */
 
 

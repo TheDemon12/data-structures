@@ -1,9 +1,19 @@
 package dev.kartikbhalla;
 
 import java.util.LinkedList;
-import java.util.Objects;
 
 public class HashTable {
+
+    /* Usage Example
+        HashTable table = new HashTable();
+        table.put(6, "A");
+        table.put(8, "B");
+        table.put(11, "C");
+        System.out.println(table.get(8));
+        System.out.println(table.remove(8));
+        System.out.println(table.get(8));
+        System.out.println(table.remove(8));
+     */
 
     private class Entry {
         public int key;

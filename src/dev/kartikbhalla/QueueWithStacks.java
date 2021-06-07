@@ -5,7 +5,6 @@ import java.util.Stack;
 public class QueueWithStacks {
 
     /* Usage Example
-
         QueueWithStacks queue = new QueueWithStacks();
         queue.enqueue(1);
         queue.enqueue(2);

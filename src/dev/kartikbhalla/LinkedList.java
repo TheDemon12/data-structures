@@ -3,7 +3,6 @@ package dev.kartikbhalla;
 public class LinkedList {
 
     /* Usage Example
-
         var list = new LinkedList();
 
         list.addLast(5);

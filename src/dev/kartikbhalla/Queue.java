@@ -5,7 +5,6 @@ import java.util.Arrays;
 public class Queue {
 
     /* Usage Example
-
         Queue queue = new Queue(5);
         queue.enqueue(1);
         queue.enqueue(2);
