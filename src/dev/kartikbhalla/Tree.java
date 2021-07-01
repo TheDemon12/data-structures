@@ -12,9 +12,16 @@ public class Tree {
         Node(int value) {
             this.value = value;
         }
+
+        @Override
+        public String toString() {
+            return "Node = " + this.value;
+        }
     }
 
     private Node root;
+
+
 
     public void insert(int value) {
         var node = new Node(value);

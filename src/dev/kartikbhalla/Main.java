@@ -6,15 +6,15 @@ public class Main {
 
     public static void main(String[] args) {
 
-        var tree = new Tree();
-
-        tree.insert(7);
-        tree.insert(5);
-        tree.insert(10);
-        tree.insert(2);
-        tree.insert(6);
-        tree.insert(8);
-        tree.insert(12);
+//        var tree = new Tree();
+//
+//        tree.insert(7);
+//        tree.insert(5);
+//        tree.insert(10);
+//        tree.insert(2);
+//        tree.insert(6);
+//        tree.insert(8);
+//        tree.insert(12);
 
 //        System.out.println(tree.find(8));
 //        System.out.println(tree.find(1));
@@ -38,6 +38,18 @@ public class Main {
 //        var list = tree.getNodesAtDistance(2);
 //        System.out.println(Arrays.toString(list.toArray()));
 
-        tree.traverseLevelOrder();
+//        tree.traverseLevelOrder();
+
+
+        var avlTree = new AVLTree();
+
+        avlTree.insert(30);
+        avlTree.insert(10);
+        avlTree.insert(20);
+//        avlTree.insert(1);
+//        avlTree.insert(6);
+//        avlTree.insert(8);
+//        avlTree.insert(12);
+
     }
 }
