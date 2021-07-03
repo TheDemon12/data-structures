@@ -87,4 +87,103 @@ public class Utils {
         return Character.MIN_VALUE;
     }
 
+    public static int[] heapSort(int[] list) {
+
+        var sortedList = new int[list.length];
+        var heap = new Heap();
+
+        for (var item : list)
+            heap.insert(item);
+        for (var i = 0; !heap.isEmpty(); i++)
+            sortedList[i] = heap.remove();
+
+        return sortedList;
+    }
+
+//    public static void heapify(int[] list) {
+//        for (int i = 0; i < list.length; i++) {
+//            heapify(list, i);
+//        }
+//    }
+
+    /* Optimised */
+
+    public static void heapify(int[] list) {
+        var lastParentIndex = (list.length / 2) - 1;
+        for (int i = lastParentIndex; i >= 0; i--) {
+            heapify(list, i);
+        }
+    }
+
+    private static void heapify(int[] list, int index) {
+
+        var largerIndex = index;
+
+        var leftChildIndex = (index * 2) + 1;
+        if (leftChildIndex < list.length &&
+                list[leftChildIndex] > list[index])
+            largerIndex = leftChildIndex;
+
+        var rightChildIndex = leftChildIndex + 1;
+        if (rightChildIndex < list.length &&
+                list[rightChildIndex] > list[index])
+            largerIndex = rightChildIndex;
+
+        if (largerIndex == index)
+            return;
+
+        swap(list, index, largerIndex);
+        heapify(list, largerIndex);
+
+    }
+
+    private static void swap(int[] list, int first, int second) {
+        var temp = list[first];
+        list[first] = list[second];
+        list[second] = temp;
+    }
+
+    public static int getKthLargestNumber(int[] list, int k) {
+
+        if(k < 1 || k > list.length)
+            throw new IllegalArgumentException();
+
+        var heap = new Heap();
+        for (int item : list)
+            heap.insert(item);
+
+        for (int i = 1; i < k; i++)
+            heap.remove();
+
+        return heap.max();
+    }
+
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

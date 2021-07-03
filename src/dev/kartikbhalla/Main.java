@@ -6,14 +6,13 @@ public class Main {
 
     public static void main(String[] args) {
 
-    var heap = new Heap();
-    heap.insert(3);
-    heap.insert(7);
-    heap.insert(2);
-    heap.insert(1);
-    heap.insert(9);
-    heap.insert(8);
-    heap.remove();
-    heap.remove();
+        int[] numbers = {5, 3, 8, 4, 1, 2};
+//        var sorted = Utils.heapSort(numbers);
+//        System.out.println(Arrays.toString(sorted));
+
+//        Utils.heapify(numbers);
+//        System.out.println(Arrays.toString(numbers));
+
+        System.out.println(Utils.getKthLargestNumber(numbers, 6));
     }
 }

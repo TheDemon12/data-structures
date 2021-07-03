@@ -33,6 +33,11 @@ public class Heap {
     public boolean isEmpty() {
         return size == 0;
     }
+    public int max() {
+        if(isEmpty())
+            throw new IllegalStateException();
+        return items[0];
+    }
 
     private void bubbleUp() {
         var index = size - 1;
