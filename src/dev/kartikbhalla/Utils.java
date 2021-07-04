@@ -89,6 +89,12 @@ public class Utils {
 
     public static int[] heapSort(int[] list) {
 
+        /* Usage Example
+            int[] numbers = {5, 3, 8, 4, 1, 2};
+            var sorted = Utils.heapSort(numbers);
+            System.out.println(Arrays.toString(sorted));
+         */
+
         var sortedList = new int[list.length];
         var heap = new Heap();
 
@@ -100,15 +106,27 @@ public class Utils {
         return sortedList;
     }
 
-//    public static void heapify(int[] list) {
-//        for (int i = 0; i < list.length; i++) {
-//            heapify(list, i);
-//        }
-//    }
+    /* Non-Optimised
+
+         public static void heapify(int[] list) {
+                for (int i = 0; i < list.length; i++) {
+                    heapify(list, i);
+                }
+            }
+
+     */
+
 
     /* Optimised */
 
     public static void heapify(int[] list) {
+
+        /* Usage Example
+            int[] numbers = {5, 3, 8, 4, 1, 2};
+            Utils.heapify(numbers);
+            System.out.println(Arrays.toString(numbers));
+         */
+
         var lastParentIndex = (list.length / 2) - 1;
         for (int i = lastParentIndex; i >= 0; i--) {
             heapify(list, i);
@@ -116,6 +134,10 @@ public class Utils {
     }
 
     private static void heapify(int[] list, int index) {
+
+        /* Usage Example
+            Internal function of heapify()
+         */
 
         var largerIndex = index;
 
@@ -138,12 +160,21 @@ public class Utils {
     }
 
     private static void swap(int[] list, int first, int second) {
+        /* Usage Example
+            Helper function of heapify()
+         */
+
         var temp = list[first];
         list[first] = list[second];
         list[second] = temp;
     }
 
     public static int getKthLargestNumber(int[] list, int k) {
+
+        /* Usage Example
+            int[] numbers = {5, 3, 8, 4, 1, 2};
+            System.out.println(Utils.getKthLargestNumber(numbers, 6));
+         */
 
         if(k < 1 || k > list.length)
             throw new IllegalArgumentException();

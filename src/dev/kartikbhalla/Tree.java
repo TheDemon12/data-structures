@@ -4,6 +4,18 @@ import java.util.ArrayList;
 
 public class Tree {
 
+    /* Usage Example
+        var tree = new Tree();
+
+        tree.insert(7);
+        tree.insert(5);
+        tree.insert(10);
+        tree.insert(2);
+        tree.insert(6);
+        tree.insert(8);
+        tree.insert(12);
+     */
+
     private class Node {
         public int value;
         public Node leftChild;

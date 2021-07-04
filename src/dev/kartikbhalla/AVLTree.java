@@ -1,6 +1,17 @@
 package dev.kartikbhalla;
 
 public class AVLTree {
+
+
+    /* Usage Example
+        var avlTree = new AVLTree();
+
+        avlTree.insert(30);
+        avlTree.insert(10);
+        avlTree.insert(20);
+     */
+
+
     private class AVLNode {
         public int value;
         public AVLNode leftChild;
